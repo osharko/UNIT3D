@@ -220,7 +220,7 @@ class TorrentSearch extends Component
     public ?string $driver = 'meilisearch';
 
     #[Url(history: true)]
-    public int $perPage = 25;
+    public int $perPage = 50;
 
     #[Url(except: 'bumped_at')]
     public string $sortField = 'bumped_at';
@@ -273,7 +273,7 @@ class TorrentSearch extends Component
 
     final public function updatedView(): void
     {
-        $this->perPage = \in_array($this->view, ['card', 'poster']) ? 24 : 25;
+        $this->perPage = \in_array($this->view, ['card', 'poster']) ? 48 : 50;
     }
 
     #[Computed]

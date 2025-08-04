@@ -101,7 +101,17 @@ return [
         'string'  => ':attribute deve contenere almeno :min caratteri.',
         'array'   => ':attribute deve avere almeno :min elementi.',
     ],
-    'not_in'               => 'Il valore selezionato per :attribute non Ã¨ valido.',
+    'multiple_of' => 'La :attribute deve essere un multiplo di :value.',
+    'not_in'      => 'La selected :attribute non è valido.',
+    'not_regex'   => 'La :attribute formato non è valido.',
+    'numeric'     => 'La :attribute deve essere un numero.',
+    'password'    => [
+        'letters'       => 'La :attribute deve contenere almeno una lettera.',
+        'mixed'         => 'La :attribute deve contenere almeno una lettera maiuscola e una minuscola.',
+        'numbers'       => 'La :attribute deve contenere almeno un numero.',
+        'symbols'       => 'La :attribute deve contenere almeno un simbolo.',
+        'uncompromised' => 'Questa :attribute è apparsa in una fuga di dati. Scegli una diversa :attribute.',
+    ],    'not_in'               => 'Il valore selezionato per :attribute non Ã¨ valido.',
     'not_regex'            => 'Il formato di :attribute non Ã¨ valido.',
     'numeric'              => ':attribute deve essere un numero.',
     'present'              => 'Il campo :attribute deve essere presente.',
@@ -138,6 +148,9 @@ return [
     | specify a specific custom language line for a given attribute rule.
     |
     */
+
+    'email_list' => 'Siamo spiacenti, questo dominio email non può essere utilizzato su questo sito. ',
+    'recaptcha'  => 'Si prega di completare il ReCaptcha.',
 
     'custom' => [
         'attribute-name' => [

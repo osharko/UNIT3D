@@ -18,7 +18,7 @@ return [
     'activity'                  => 'Attività',
     'approved'                  => 'Approvato',
     'author'                    => 'Autore',
-    'bug'                       => 'insetto',
+    'bug'                       => 'Bug',
     'category-quick-search'     => 'Ricerca rapida per nome argomento (all interno della categoria)',
     'close-topic'               => 'Blocca argomento',
     'closed'                    => 'Chiuso',
