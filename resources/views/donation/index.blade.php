@@ -16,7 +16,7 @@
 
 @section('main')
     <section x-data class="panelV2">
-        <h2 class="panel__heading">Support {{ config('other.title') }}</h2>
+        <h2 class="panel__heading">Supporta {{ config('other.title') }}</h2>
         <div class="panel__body">
             <p>{{ config('donation.description') }}</p>
             <div class="donation-packages">
@@ -45,25 +45,26 @@
                             <div class="donation-package__benefits-list">
                                 <ol class="benefits-list">
                                     @if ($package->donor_value === null)
-                                        <li>Unlimited Download Slots</li>
+                                        <li>Illimitati slot di Download</li>
                                     @endif
 
                                     @if ($package->donor_value === null)
                                         <li>Custom User Icon</li>
                                     @endif
 
-                                    <li>Global Freeleech</li>
-                                    <li>Immunity To Automated Warnings (Don't Abuse)</li>
+                                    <li>Freeleech globale</li>
+                                    <li>Immunita agli HIT-And-Run automatici</li>
+									<li>Accesso al Server PLEX</li>
                                     <li
                                         style="
                                             background-image: url(/img/sparkels.gif);
                                             width: auto;
                                         "
                                     >
-                                        Sparkle Effect On Username
+                                        Username scintillante 
                                     </li>
                                     <li>
-                                        Donor Star By Username
+                                        Username con la stella del donatore
                                         @if ($package->donor_value === null)
                                             <i
                                                 id="lifeline"
@@ -75,13 +76,13 @@
                                         @endif
                                     </li>
                                     <li>
-                                        Warm Fuzzy Feeling By Supporting
+                                        Priorita nel supporto su
                                         {{ config('other.title') }}
                                     </li>
                                     @if ($package->upload_value !== null)
                                         <li>
                                             {{ App\Helpers\StringHelper::formatBytes($package->upload_value) }}
-                                            Upload Credit
+                                            in credito di upload
                                         </li>
                                     @endif
 
@@ -92,7 +93,7 @@
                                     @endif
 
                                     @if ($package->invite_value !== null)
-                                        <li>{{ $package->invite_value }} Invites</li>
+                                        <li>{{ $package->invite_value }} Inviti</li>
                                     @endif
                                 </ol>
                             </div>
@@ -115,7 +116,7 @@
 
         @foreach ($packages as $package)
             <dialog class="dialog" x-ref="dialog{{ $package->id }}">
-                <h4 class="dialog__heading">Donate $ {{ $package->cost }} USD</h4>
+                <h4 class="dialog__heading">Donate {{ $package->cost }} {{ config('donation.currency') }}</h4>
                 <form
                     class="dialog__form"
                     method="POST"
@@ -124,17 +125,18 @@
                 >
                     @csrf
                     <span class="text-success text-center">
-                        To make a donation you must complete the following steps:
+                        Per effettuare una donazione è necessario completare i seguenti passaggi:
                     </span>
                     <div class="form__group--horizontal">
                         @foreach ($gateways->sortBy('position') as $gateway)
-                            <p class="form__group">
+			    <p class="form__group">
                                 <input
                                     class="form__text"
                                     type="text"
                                     disabled
                                     value="{{ $gateway->address }}"
-                                    id="{{ 'gateway-' . $gateway->id }}"
+				    id="{{ 'gateway-' . $gateway->id }}"
+				    style="text-align: center;"
                                 />
                                 <label
                                     for="{{ 'gateway-' . $gateway->id }}"
@@ -146,16 +148,15 @@
                         @endforeach
 
                         <p class="text-info">
-                            Send
+                            Invia
                             <strong>
-                                $ {{ $package->cost }} {{ config('donation.currency') }}
+                                {{ $package->cost }} {{ config('donation.currency') }}
                             </strong>
-                            to gateway of your choice. Take note of the tx hash, receipt number, etc
-                            and input it below.
+                            al gateway di tua scelta. Prendi nota dell'hash, del numero di ricevuta o altro per farti riconoscere e inseriscilo di seguito.
                         </p>
                     </div>
                     <div class="form__group--horizontal">
-                        <p class="form__group">
+                        <!-- <p class="form__group">
                             <input
                                 class="form__text"
                                 type="text"
@@ -166,7 +167,7 @@
                             <label for="package-cost" class="form__label form__label--floating">
                                 Cost
                             </label>
-                        </p>
+                        </p> -->
                         <p class="form__group">
                             <input
                                 class="form__text"
@@ -181,7 +182,7 @@
                         </p>
                     </div>
                     <span class="text-warning">
-                        * Transactions may take up to 48 hours to process.
+                        * Elaborare la transazione potrebbe richiedere fino a 48 ore.
                     </span>
                     <p class="form__group">
                         <input type="hidden" name="package_id" value="{{ $package->id }}" />

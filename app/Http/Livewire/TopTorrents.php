@@ -91,7 +91,7 @@ class TopTorrents extends Component
                     ->where('seeders', '=', 0)
                     ->orderByDesc('leechers')
             )
-            ->take(5)
+            ->take(10)
             ->get();
 
         // See app/Traits/TorrentMeta.php

@@ -23,7 +23,7 @@ return [
     |
     */
 
-    'subject' => 'Welcome to UNIT3D',
+    'subject' => 'Benvenuto su ShareIsland',
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +34,18 @@ return [
     |
     */
 
-    'message' => 'Welcome To [b]UNIT3D[/b].
+    'message' => 'Benvenuto su [b]ShareIsland[/b].
 
-    - UNIT3D :space_invader:',
+    - Ti consiglio di prenderti 5 minuti per leggere bene il [url=https://shareisland.org/pages/1]Regolamento[/url] e le [url=https://shareisland.org/pages/2]FAQ[/url] perchÃ¨ grazie a quelli che non lo rispettano volutamente, ci troviamo a volte nella situazione di eliminare account di persone che non lo seguono per ingenuitÃ . 
+	
+	Carica un Avatar, puoi trovare tutte le impostazioni del tuo profilo in alto a destra, dove potrai anche attivare la visualizzazione delle locandine; 
+	
+	se hai domande controlla che non sia gia stata aperta la stessa richiesta di informazioni nel [url=https://shareisland.org/forums]FORUM[/url] e nel caso non ci fosse aprine una, non richiederle nella chat (non Ã¨ detto che chi puÃ² aiutarti veda il messaggio o che non ci sia giÃ  nel forum la risposta al tuo quesito).
+	
+	Se hai un problema col tuo account il simbolo del salvagente in alto corrisponde al [url=https://shareisland.org/tickets]HelpDesk[/url].
+	
+	Tutti gli utenti che non si saranno presentati nel forum, che non avvieranno un download da linea fissa nella prima settimana e con account inattivi dal momento della registrazione verranno eliminati.
+	
+	Comportati in modo amichevole, buona permanenza.[url=https://shareisland.org/forums/topics/548]Donazione[/url]',
 ];
+

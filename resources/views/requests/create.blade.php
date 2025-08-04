@@ -341,7 +341,7 @@
                             name="bounty"
                             type="text"
                             pattern="[0-9]*?[1-9][0-9]{2,}"
-                            value="100"
+                            value="300"
                             required
                         />
                         <label class="form__label form__label--floating" for="bounty">

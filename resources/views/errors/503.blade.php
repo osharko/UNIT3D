@@ -1,5 +1,5 @@
 @extends('errors.layout')
 
-@section('title', 'Error 503: Service Unavailable!')
+@section('title', 'Servizio non disponibile!')
 
-@section('description', 'Sorry, we are doing some maintenance. Please check back soon.')
+@section('description', 'Siamo spiacenti, stiamo effettuando dei lavori di manutenzione. Torneremo presto online' )

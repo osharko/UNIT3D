@@ -111,7 +111,7 @@ class TorrentRequestSearch extends Component
     public bool $myFilled = false;
 
     #[Url(history: true)]
-    public int $perPage = 25;
+    public int $perPage = 50;
 
     #[Url(history: true)]
     public string $sortField = 'created_at';

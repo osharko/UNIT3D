@@ -2,7 +2,6 @@
     <div class="top-nav__left">
         <a class="top-nav__branding" href="{{ route('home.index') }}">
             <img src="{{ url('/favicon.ico') }}" style="height: 35px" />
-            <span class="top-nav__site-logo">{{ \config('other.title') }}</span>
         </a>
         @include('partials.quick-search-dropdown')
     </div>
@@ -235,12 +234,6 @@
                         <a href="{{ route('donations.index') }}">
                             <i class="fas fa-display-chart-up-circle-dollar"></i>
                             Support {{ config('other.title') }} ({{ $donationPercentage }}%)
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://square.link/u/VjB1CNfm" target="_blank">
-                            <i class="fas fa-handshake"></i>
-                            Support UNIT3D
                         </a>
                     </li>
                 </ul>
